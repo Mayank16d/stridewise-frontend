@@ -82,7 +82,7 @@ const CourseDetailsPage = ({ id }: Props) => {
           {(
             <CourseDetails
               data={data.course}
-              clientSecret={clientSecret}
+              // clientSecret={clientSecret}
               setRoute={setRoute}
               setOpen={setOpen}
             />
