@@ -76,7 +76,7 @@ const CourseDetails = ({ data, setRoute, setOpen: openAuthModal }: Props) => {
       //   receipt: `receipt_${Date.now()}`,
       // });
       const orderResponse = await axios.post("https://stride-wise-backend-1-a30b.onrender.com/api/v1/create-order", {
-        amount: 7999, // Convert to smallest currency unit
+        amount: 6999, // Convert to smallest currency unit
       });
       if (!orderResponse.data.success) {
         alert("Failed to create Razorpay order. Please try again.");
@@ -115,7 +115,7 @@ const CourseDetails = ({ data, setRoute, setOpen: openAuthModal }: Props) => {
 
   const discountPercentage =
     ((data?.estimatedPrice - data.price) / data?.estimatedPrice) * 100;
-  const discountPercentagePrice = discountPercentage.toFixed(0);
+  const discountPercentagePrice = 56;
   const isPurchased =
     user && user.courses && user.courses.some((course: any) => course._id === data._id);
 
@@ -175,7 +175,7 @@ const CourseDetails = ({ data, setRoute, setOpen: openAuthModal }: Props) => {
               <CoursePlayer videoUrl={data?.demoUrl} title={data?.title} />
               <div className="flex items-center">
                 <h1 className="pt-5 text-[25px] text-black dark:text-white">
-                  {data.price === 0 ? "Free" : "Rs " + data.price}
+                  {data.price === 0 ? "Free" : "Rs 6999"}
                 </h1>
                 <h5 className="pl-3 text-[20px] mt-2 line-through opacity-80 text-black dark:text-white">
                   {data.estimatedPrice}
