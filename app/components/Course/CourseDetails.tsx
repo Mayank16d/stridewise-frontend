@@ -43,7 +43,10 @@ const CourseDetails = ({ data, setRoute, setOpen: openAuthModal }: Props) => {
         courseId: data._id,
         payment_info: paymentResponse,
       });
-      const response = await axios.post("https://stride-wise-backend-1-a30b.onrender.com/api/v1/payment-success", {
+      const response = await axios.post(
+        "https://stride-wise-backend-1-a30b.onrender.com/api/v1/payment-success"
+        // "http://localhost:8000/api/v1/payment-success"
+        , {
         userId: user._id,
         courseId: data._id,
         payment_info: paymentResponse, // Send payment details
@@ -75,7 +78,10 @@ const CourseDetails = ({ data, setRoute, setOpen: openAuthModal }: Props) => {
       //   currency: "INR",
       //   receipt: `receipt_${Date.now()}`,
       // });
-      const orderResponse = await axios.post("https://stride-wise-backend-1-a30b.onrender.com/api/v1/create-order", {
+      const orderResponse = await axios.post(
+        "https://stride-wise-backend-1-a30b.onrender.com/api/v1/create-order"
+        // "http://localhost:8000/api/v1/create-order"
+        , {
         amount: 6999, // Convert to smallest currency unit
       });
       if (!orderResponse.data.success) {
@@ -139,10 +145,10 @@ const CourseDetails = ({ data, setRoute, setOpen: openAuthModal }: Props) => {
             </h1>
             <div className="flex items-center justify-between pt-3">
               <div className="flex items-center">
-                <Ratings rating={data.ratings} />
+                <Ratings rating = {4.5} />
               </div>
               <h5 className="text-black dark:text-white">
-                {data.purchased} Students
+                903 Students
               </h5>
             </div>
             <h1 className="text-[25px] font-Poppins font-[600] text-black dark:text-white">
@@ -206,7 +212,7 @@ const CourseDetails = ({ data, setRoute, setOpen: openAuthModal }: Props) => {
                 • Certificate of completion
               </p>
               <p className="pb-3 800px:pb-1 text-black dark:text-white">
-                • One to One Query Solution 
+                • One to One Query Solution  
               </p>
             </div>
           </div>
