@@ -145,7 +145,7 @@ const CourseDetails = ({ data, setRoute, setOpen: openAuthModal }: Props) => {
             </h1>
             <div className="flex items-center justify-between pt-3">
               <div className="flex items-center">
-                <Ratings rating = {4.5} />
+                <Ratings rating = {4.5 } />
               </div>
               <h5 className="text-black dark:text-white">
                 903 Students
