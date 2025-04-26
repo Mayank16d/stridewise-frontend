@@ -206,7 +206,7 @@ const CourseDetails = ({ data, setRoute, setOpen: openAuthModal }: Props) => {
                 • Certificate of completion
               </p>
               <p className="pb-3 800px:pb-1 text-black dark:text-white">
-                • Premium Support
+                • One to One Query Solution
               </p>
             </div>
           </div>
