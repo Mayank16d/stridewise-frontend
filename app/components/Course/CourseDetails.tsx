@@ -44,7 +44,7 @@ const CourseDetails = ({ data, setRoute, setOpen: openAuthModal }: Props) => {
         payment_info: paymentResponse,
       });
       const response = await axios.post(
-        "https://stride-wise-backend-1-a30b.onrender.com/api/v1/payment-success"
+        `${process.env.NEXT_PUBLIC_SOCKET_SERVER_URI}/api/v1/payment-success`
         // "http://localhost:8000/api/v1/payment-success"
         , {
         userId: user._id,
