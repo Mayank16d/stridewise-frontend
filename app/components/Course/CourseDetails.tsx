@@ -79,8 +79,8 @@ const CourseDetails = ({ data, setRoute, setOpen: openAuthModal }: Props) => {
       //   receipt: `receipt_${Date.now()}`,
       // });
       const orderResponse = await axios.post(
-        "https://stride-wise-backend-1-a30b.onrender.com/api/v1/create-order"
-        // "http://localhost:8000/api/v1/create-order"
+        "https://stride-wise-backend-1-a30b.onrender.com/api/v2/create-order"
+        // "http://localhost:8000/api/v2/create-order"
         , {
         amount: 8999, // Convert to smallest currency unit
       });
