@@ -121,7 +121,7 @@ const CourseDetails = ({ data, setRoute, setOpen: openAuthModal }: Props) => {
 
   const discountPercentage =
     ((data?.estimatedPrice - data.price) / data?.estimatedPrice) * 100;
-  const discountPercentagePrice = 43;
+  const discountPercentagePrice = 32.5;
   const isPurchased =
     user && user.courses && user.courses.some((course: any) => course._id === data._id);
 
@@ -181,13 +181,13 @@ const CourseDetails = ({ data, setRoute, setOpen: openAuthModal }: Props) => {
               <CoursePlayer videoUrl={data?.demoUrl} title={data?.title} />
               <div className="flex items-center">
                 <h1 className="pt-5 text-[25px] text-black dark:text-white">
-                  {data.price === 0 ? "Free" : "Rs 26999"}
+                  {data.price === 0 ? "Free" : data.price}
                 </h1>
                 <h5 className="pl-3 text-[20px] mt-2 line-through opacity-80 text-black dark:text-white">
-                  "39999"
+                  {data.estimatedPrice}
                 </h5>
                 <h4 className="pl-5 pt-4 text-[22px] text-black dark:text-white">
-                  32.5% Off
+                  {discountPercentagePrice}% Off
                 </h4>
               </div>
               <div className="flex items-center">
