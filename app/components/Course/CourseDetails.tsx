@@ -82,7 +82,7 @@ const CourseDetails = ({ data, setRoute, setOpen: openAuthModal }: Props) => {
         `${process.env.NEXT_PUBLIC_SOCKET_SERVER_URI}/api/v2/create-order`
         // "http://localhost:8000/api/v2/create-order"
         , {
-        amount: 8999, // Convert to smallest currency unit
+        amount: 26999, // Convert to smallest currency unit
       });
       if (!orderResponse.data.success) {
         alert("Failed to create Razorpay order. Please try again.");
